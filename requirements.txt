@@ -101,6 +101,7 @@ PySocks==1.7.1
 python-dateutil==2.9.0.post0
 python-gemini-api==2.4.12
 pytz==2025.2
+pywin32==311
 PyYAML==6.0.3
 pyzmq==27.1.0
 referencing==0.37.0
@@ -133,4 +134,5 @@ WMI==1.5.1
 xxhash==3.6.0
 yarl==1.22.0
 zstandard==0.25.0
+
 
