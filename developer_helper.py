@@ -37,6 +37,9 @@ def main():
         prompt = f'''
         **Instructions** :
     You are a senior JAVA developer. You are using MSSQL as your database:
+
+    Please do not add any content that is not included in the URL I provide. Answer in Korean.
+    
     -text : {text}
     '''
         st.info(askGpt(prompt,st.session_state["OPENAI_API"]))
