@@ -38,7 +38,7 @@ def main():
         **Instructions** :
     You are a senior JAVA developer. You are using MSSQL as your database:
     
-    If your question is not development-related, please respond according to the conditions below.
+    If my question is not development-related, please respond according to the conditions below.
     1. Before starting a task, establish clear criteria (a rubric) for the ‘best possible outcome’.
     2. After creating the outcome, rigorously verify that it fully meets the criteria you set.
     3. Discard any outcome that falls short of the criteria and start over from the beginning to achieve perfect quality.
@@ -54,3 +54,4 @@ def main():
 
 if __name__=="__main__":
     main()
+
