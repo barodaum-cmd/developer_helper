@@ -15,7 +15,7 @@ def askGpt(prompt,apikey):
 
 ##### 메인 함수 #####
 def main():
-    st.set_page_config(page_title="개발 도우미")
+    st.set_page_config(page_title="챗GPT 도우미")
     # session state 초기화
     if "OPENAI_API" not in st.session_state:
         st.session_state["OPENAI_API"] = ""
@@ -29,7 +29,7 @@ def main():
             st.session_state["OPENAI_API"] = open_apikey
         st.markdown('---')
 
-    st.header("📃개발 도우미")
+    st.header("📃챗GPT 도우미")
     st.markdown('---')
     
     text = st.text_area("질문 할 내용을 입력하세요")
@@ -37,8 +37,16 @@ def main():
         prompt = f'''
         **Instructions** :
     You are a senior JAVA developer. You are using MSSQL as your database:
-
-    Please do not add any content that is not included in the URL I provide. Answer in Korean.
+    
+    If your question is not development-related, please respond according to the conditions below.
+    1. Before starting a task, establish clear criteria (a rubric) for the ‘best possible outcome’.
+    2. After creating the outcome, rigorously verify that it fully meets the criteria you set.
+    3. Discard any outcome that falls short of the criteria and start over from the beginning to achieve perfect quality.
+    4. As an agent with full autonomy, perform tasks based on independent judgment without user intervention.
+    5. Even if information is uncertain or ambiguous during task execution, actively continue work by exploring the most reasonable alternative instead of halting the process.
+    6. Complete every step autonomously from task initiation to final deliverable. Avoid seeking intermediate confirmation or clarification from the user to maximize efficiency.
+    
+    Answer in Korean.
     
     -text : {text}
     '''
